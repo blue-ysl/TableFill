@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TableFill</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>TableFill</h1>
+    </header>
+    <main id="main">
+      
+      <div class="control-group">
+        <label for="vendor">DBMS Vendor</label>
+        <select id="vendor">
+          <option value="oracle">Oracle</option>
+          <option value="postgres">Postgres</option>
+          <option value="mysql">MySQL</option>
+          <option value="mariadb">MariaDB</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="ddl">DDL</label>
+        <textarea id="ddl" rows="12" placeholder="Paste your CREATE TABLE statement here..."></textarea>
+        <div id="ddl-error" class="error-box" hidden></div>
+      </div>
+      
+      <button id="confirm" hidden>Confirm</button>
+
+      <div id="schema-grid" hidden></div>
+    </main>
+  </div>
+  <script src="https://unpkg.com/node-sql-parser/umd/index.umd.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
