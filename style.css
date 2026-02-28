@@ -79,7 +79,7 @@ header h1 {
   word-break: break-word;
 }
 
-#confirm {
+.myButton {
   align-self: flex-start;
   font-family: inherit;
   font-size: 0.9rem;

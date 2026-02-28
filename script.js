@@ -29,6 +29,7 @@ confirmBtn.addEventListener('click', () => {
   try {
     parsedSchema = parseDDL(vendorEl.value, ddlEl.value);
     renderGrid(parsedSchema);
+    document.getElementById('create-data').hidden = false;
   } catch (e) {
     errorBox.textContent = e.message;
     errorBox.hidden = false;
